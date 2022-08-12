@@ -1,14 +1,7 @@
-<p style="color: green"><%= notice %></p>
+<h1>Tout mes posts </h1>
 
-<h1>Posts</h1>
-
-<div id="posts">
+<ul>
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <li> <%= link_to post.title, post_path(post) %></li>
   <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+</ul>
